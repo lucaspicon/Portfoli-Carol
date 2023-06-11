@@ -29,7 +29,7 @@ modalCloseBtns.forEach((modalCloseBtns) => {
 
 //Portfolio section - Modal
 
-const portfolioModals = document.querySelectorAll(".portfolio-model")
+const portfolioModals = document.querySelectorAll(".portfolio-modal")
 const imgCards = document.querySelectorAll(".img-card")
 const portfolioCloseBtns = document.querySelectorAll(".portfolio-close-btn")
 

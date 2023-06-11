@@ -155,7 +155,7 @@ header {
   left: 0;
   backdrop-filter: 20px;
   transition: 0.6s ease;
-  --webkit-backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -370,7 +370,7 @@ header.sticky .nav-bar {
 }
 
 .sobre-img {
-  position: relative;
+  max-width: 100%;
 }
 
 .sobre-img img {
@@ -433,6 +433,18 @@ header.sticky .nav-bar {
 .sobre-info .lista-profissional .item-lista span {
   color: var(--terceira-cor);
   font-size: var(--small-font-size);
+}
+
+.buttonCV {
+  background: var(--segunda-cor);
+  color: #fff;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 25px;
+  padding: 20px 30px;
+  letter-spacing: 1px;
+  border-radius: 10px;
 }
 
 /*=======Formacoes section=======*/
@@ -756,11 +768,11 @@ header.sticky .nav-bar {
   color: #fff;
   transform: translateY(20px);
   opacity: 0;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 .portfolio-lista .img-card:hover .info {
-  transform: translateY(0);
+  transform: none;
   opacity: 1;
 }
 
@@ -778,26 +790,26 @@ header.sticky .nav-bar {
   object-fit: cover;
 }
 
-.portfolio-model {
+.portfolio-modal {
   z-index: 999999;
   position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
-  background: var(--cor-transparente-01);
-  backdrop-filter: blur(20px);
+  background: var(--bg-cor-transparente);
+  backdrop-filter: blur(10px);
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 }
 
-.portfolio-model.active {
+.portfolio-modal.active {
   visibility: visible;
   opacity: 1;
 }
 
-.portfolio-model-body {
+.portfolio-modal-body {
   position: relative;
   background: var(--modal-bg-cor);
   max-width: 600px;
@@ -809,11 +821,11 @@ header.sticky .nav-bar {
   transition: 0.5s ease;
 }
 
-.portfolio-model.active .portfolio-model-body {
+.portfolio-modal.active .portfolio-modal-body {
   transform: translateY(0);
 }
 
-.portfolio-close-btn {
+.portfolio-modal-body .portfolio-close-btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -821,11 +833,11 @@ header.sticky .nav-bar {
   cursor: pointer;
 }
 
-.portfolio-model-body h3 {
+.portfolio-modal-body h3 {
   font-size: 1.5em;
 }
 
-.portfolio-model-body img {
+.portfolio-modal-body img {
   width: 100%;
   margin: 20px 0;
   border-radius: 10px;
